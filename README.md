@@ -1,4 +1,4 @@
-This repository contains the Python source code employed in https://arxiv.org/abs/2305.00373.
+This repository contains the Python (3.8.8) source code employed in https://arxiv.org/abs/2305.00373.
 
 sp2_R.py contains all functions employed to compute the thermodynamic properties of the single-mode cavity-coupled reaction under reactant VSC.
 
