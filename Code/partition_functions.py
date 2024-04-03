@@ -19,7 +19,7 @@ def qV(w,t):
     qV = np.exp(- 1/2 * hbar * beta * w)/(1 - np.exp(- 1 * hbar * beta * w))
     return qV 
 
-def qe(energy,gj):
+def qe(energy,gj,t):
     beta = 1/(kb*t)
     eg = energy
     qe = gj * np.exp(-beta*eg)
@@ -41,7 +41,7 @@ def qETH_Cl(t):
     sigma = 1
     energy = -538.797 * 220000
     gj = 1
-    qETH_Cl = qtrans(m,t) * qrotNL(ia,ib,ic,sigma,t) * QV(lv,t) * qe(energy,gj)
+    qETH_Cl = qtrans(m,t) * qrotNL(ia,ib,ic,sigma,t) * QV(lv,t) * qe(energy,gj,t)
     return qETH_Cl
 
 def qETH_Br(t):
@@ -53,21 +53,21 @@ def qETH_Br(t):
     sigma = 1
     energy = -2651.775712 * 220000
     gj = 1
-    qETH_Br = qtrans(m,t) * qrotNL(ia,ib,ic,sigma,t) * QV(lv,t) * qe(energy,gj)
+    qETH_Br = qtrans(m,t) * qrotNL(ia,ib,ic,sigma,t) * QV(lv,t) * qe(energy,gj,t)
     return qETH_Br
 
 def qCl(t):
     m = 35.45/NA 
     energy = -459.795555 * 220000
     gj = 1
-    qCl = qtrans(m,t) * qe(energy,gj)
+    qCl = qtrans(m,t) * qe(energy,gj,t)
     return qCl
  
 def qBr(t):
     m = 79.9/NA
     energy = -2572.853721 * 220000
     gj = 1
-    qBr = qtrans(m,t) * qe(energy,gj)
+    qBr = qtrans(m,t) * qe(energy,gj,t)
     return qBr
 
 def eq(t):
